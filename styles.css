@@ -1,4 +1,3 @@
-/* Police customisées */
 @font-face {
     font-family: 'LG';
     src: url(fonts/Batuphat\ Script.otf);
@@ -11,12 +10,12 @@
   
   @font-face {
     font-family: 'Inter-Extra';
-    src: url(fonts/font-files/InterDisplay-ExtraBold.woff2);
+    src: url(fonts/InterDisplay-ExtraBold.woff2);
   }
   
   @font-face {
     font-family: 'Inter-M';
-    src: url(fonts/font-files/Inter-Medium.woff2);
+    src: url(fonts/Inter-Medium.woff2);
   }
   
   * {
@@ -56,7 +55,7 @@
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    position: relative; /* Positionner relativement par rapport au logo */
+    position: relative;
   }
   
   header .logo {
@@ -88,13 +87,13 @@
     top: 5px;
     left: 10px;
     opacity: 0;
-    transform: translateX(100%); /* Initialement caché à droite du logo */
+    transform: translateX(100%);
     transition: opacity 0.1s ease, transform 0.1s ease;
   }
   
   header .logo-name.visible {
     opacity: 1;
-    transform: translateX(0); /* Le nom du logo arrive en position correcte */
+    transform: translateX(0);
   }
   
   /* Liens de navigation */
