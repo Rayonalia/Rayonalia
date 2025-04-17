@@ -101,8 +101,8 @@ nav a {
   margin-left: 0.8rem;
   text-decoration: none;
   color: #333;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 400; /* Poids de la police réduit */
+  font-size: 0.9rem; /* Taille de la police réduite */
   transition: color 0.1s ease;
 }
 
@@ -114,7 +114,6 @@ nav a:hover {
 .hero {
   text-align: center;
   padding: 7rem 2rem 4rem 2rem;
-  margin-top: 70px;
   background: linear-gradient(340deg, #03010c, #410055);
 }
 
