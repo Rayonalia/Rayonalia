@@ -10,12 +10,12 @@
   
   @font-face {
     font-family: 'Inter-Extra';
-    src: url(fonts/InterDisplay-ExtraBold.woff2);
+    src: url(fonts/InterDisplay-ExtraBold.woff2) format('woff2');
   }
   
   @font-face {
     font-family: 'Inter-M';
-    src: url(fonts/Inter-Medium.woff2);
+    src: url(fonts/Inter-Medium.woff2) format('truetype');
   }
   
   * {
