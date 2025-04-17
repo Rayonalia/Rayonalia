@@ -24,10 +24,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: 'Inter-Extra', sans-serif;
   background-color: #ffffff;
@@ -35,6 +31,11 @@ body {
   line-height: 1.6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
 header {
   position: fixed;
   top: 0;
@@ -50,21 +51,17 @@ header {
   transition: all 0.1s ease;
 }
 
-.logo-container {
+header .logo-container {
   display: flex;
   align-items: center;
   gap: 0.3rem;
   position: relative;
 }
 
-.logo {
+header .logo {
   height: 50px;
   opacity: 1;
   transition: opacity 0.08s ease;
-}
-
-.logo.hidden {
-  opacity: 0;
 }
 
 .logo-link {
@@ -73,7 +70,15 @@ header {
   text-decoration: none;
 }
 
-.logo-name {
+.logo-link:hover .logo-name {
+  transition: color 0.3s;
+}
+
+header .logo.hidden {
+  opacity: 0;
+}
+
+header strong.logo-name {
   font-size: 2rem;
   font-weight: 500;
   color: #111;
@@ -86,11 +91,12 @@ header {
   transition: opacity 0.1s ease, transform 0.1s ease;
 }
 
-.logo-name.visible {
+header .logo-name.visible {
   opacity: 1;
   transform: translateX(0);
 }
 
+/* Liens de navigation */
 nav a {
   margin-left: 0.8rem;
   text-decoration: none;
@@ -104,9 +110,11 @@ nav a:hover {
   color: #0070f3;
 }
 
+/* Sections */
 .hero {
   text-align: center;
   padding: 7rem 2rem 4rem 2rem;
+  margin-top: 70px;
   background: linear-gradient(340deg, #03010c, #410055);
 }
 
@@ -146,6 +154,7 @@ nav a:hover {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
+  margin: 2rem auto 1.5rem auto;
 }
 
 .section h3 {
@@ -157,10 +166,11 @@ nav a:hover {
 
 .section p {
   max-width: 700px;
-  margin: 0.5rem auto 1.5rem auto;
+  margin: 0 auto;
   font-size: 1.1rem;
   font-family: 'Inter-M';
   text-align: center;
+  margin: 0.5rem auto 1.5rem auto;
 }
 
 .features {
@@ -194,35 +204,4 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
-}
-
-/* Responsive (mobile) */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-  }
-
-  .hero h1 {
-    font-size: 1.6rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .section h2 {
-    font-size: 1.6rem;
-  }
-
-  .section p {
-    font-size: 1rem;
-  }
 }
