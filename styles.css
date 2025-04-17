@@ -101,8 +101,8 @@ nav a {
   margin-left: 0.8rem;
   text-decoration: none;
   color: #333;
-  font-weight: 400; /* Poids de la police réduit */
-  font-size: 0.9rem; /* Taille de la police réduite */
+  font-weight: 400;
+  font-size: 0.9rem;
   transition: color 0.1s ease;
 }
 
