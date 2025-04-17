@@ -82,7 +82,7 @@
     font-size: 2rem;
     font-weight: 500;
     color: #111;
-    font-family: 'LG';
+    font-family: 'LG', sans serif;
     position: absolute;
     top: 5px;
     left: 10px;
