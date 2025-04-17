@@ -25,7 +25,7 @@
   }
   
   body {
-    font-family: 'SF';
+    font-family: 'SF', sans serif;
     background-color: #ffffff;
     color: #111;
     line-height: 1.6;
@@ -133,7 +133,7 @@
   .hero button {
     padding: 0.7rem 1.4rem;
     font-size: 1rem;
-    font-family: 'Inter-M';
+    font-family: 'Inter-M', sans serif;
     background-color: #2e13a7;
     color: #fff;
     border: none;
@@ -167,7 +167,7 @@
     max-width: 700px;
     margin: 0 auto;
     font-size: 1.1rem;
-    font-family: 'Inter-M';
+    font-family: 'Inter-M', sans serif;
     text-align: center;
     margin: 0.5rem auto 1.5rem auto;
   }
