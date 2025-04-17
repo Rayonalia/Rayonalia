@@ -1,8 +1,6 @@
 window.onload = function () {
-  setTimeout(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    handleScroll();
-  }, 10);
+  window.scrollTo(0, 0);
+  handleScroll();
 };
 
 window.addEventListener("scroll", function () {
