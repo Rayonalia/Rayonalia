@@ -1,4 +1,22 @@
+@font-face {
+  font-family: 'LG';
+  src: url(fonts/Batuphat\ Script.otf);
+}
 
+@font-face {
+  font-family: 'SF';
+  src: url(fonts/SF-Pro-Text-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Inter-Extra';
+  src: url(fonts/InterDisplay-ExtraBold.woff2);
+}
+
+@font-face {
+  font-family: 'Inter-M';
+  src: url(fonts/Inter-Medium.woff2);
+}
 
 * {
   margin: 0;
@@ -7,6 +25,7 @@
 }
 
 body {
+  font-family: 'Inter-Extra', sans-serif;
   background-color: #ffffff;
   color: #111;
   line-height: 1.6;
