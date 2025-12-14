@@ -19,7 +19,7 @@
     --spacing-md: 25px;
     --spacing-sm: 10px;
 
-    /* Tailles de Police Spécifiques (Ajouts pour flexibilité) */
+    /* Tailles de Police Spécifiques */
     --font-size-button: 1.1rem;
     --font-size-nav: 0.95rem;
     --font-size-footer: 0.9rem;
@@ -56,10 +56,14 @@ h1, h2, h3 {
     text-transform: none;
 }
 h1 { font-size: 4rem; }
+h2 { font-size: 2.8rem; }
+h3 { font-size: 1.6rem; }
+
 
 /* --- Typographie Spéciale --- */
 .hero h1 .highlight-text {
     color: var(--color-primary);
+    /* L'effet text-shadow a été retiré ici */
     font-size: 100px;
 }
 
@@ -218,7 +222,6 @@ nav a:hover {
 }
 
 .section h2 {
-    font-size: 2.8rem;
     margin-bottom: var(--spacing-lg);
     position: relative;
     color: var(--color-text);
@@ -235,7 +238,6 @@ nav a:hover {
 }
 
 .section h3 {
-    font-size: 1.6rem;
     margin-bottom: 0.8rem;
     font-family: var(--font-heading);
     font-weight: 800;
@@ -415,40 +417,113 @@ footer a:hover {
     color: var(--color-text);
 }
 
-/* --- Responsive de Base --- */
+/* --- Media Queries pour le Responsive Design --- */
+
 @media (max-width: 900px) {
+    /* Tablettes et Paysage Mobile */
     header {
         padding: 1rem 1rem;
     }
     nav a {
         margin-left: 0.8rem;
     }
+    /* Diminution de la taille du titre principal sur les tablettes */
     .hero h1 {
         font-size: 3rem;
     }
+    .hero h1 .highlight-text {
+        font-size: 80px;
+    }
+    .section h2 {
+        font-size: 2.2rem;
+    }
 }
+
 @media (max-width: 768px) {
+    /* Mobiles et Tablettes Portait */
     header {
+        /* On retire les padding du logo et nav sur mobile */
+        padding: var(--spacing-md) 1rem;
         flex-direction: column;
         align-items: flex-start;
     }
     nav {
+        /* La navigation prend toute la largeur */
+        width: 100%;
         margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap; /* Permet aux liens de passer à la ligne */
+        justify-content: center;
     }
     nav a {
-        margin-left: 0;
-        margin-right: 0.8rem;
+        margin: 0.5rem 0.5rem;
+        font-size: 1rem;
     }
+    
     .hero {
-        padding-top: 12rem;
+        padding-top: 8rem; /* Remonte le contenu pour ne pas être caché par le header plus grand */
+        padding-bottom: 4rem;
+        min-height: 50vh;
     }
-    .features {
-        flex-direction: column;
+    .hero p {
+        font-size: 1.2rem;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
-    .contact-grid {
+    
+    .features, .contact-grid {
+        /* Les sections de grille passent en colonne */
         flex-direction: column;
+        gap: var(--spacing-sm); 
     }
     .contact-info {
         flex-basis: auto;
+    }
+    .contact-form-container {
+        border-right: none;
+        border-left: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Optimisations Extrêmes (Petits Mobiles) */
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero h1 .highlight-text {
+        font-size: 50px;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .section h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Cache la navigation pour faire place à un menu hamburger */
+    header nav {
+        display: none; 
+    }
+
+    .logo-link {
+        /* Centre le logo dans l'espace réduit du header */
+        width: 100%;
+        justify-content: center;
+        min-width: unset;
+    }
+
+    header {
+        padding: 1rem 1rem;
+        /* Force une seule ligne pour le logo en attendant le menu hamburger */
+        flex-direction: row; 
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
