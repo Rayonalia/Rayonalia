@@ -1,19 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Roboto:wght@300;400;500&display=swap');
 
 :root {
+    /* Couleurs */
     --color-primary: #00FFC2;
     --color-text: #ffffff; 
     --color-background: #0D0D0D; 
     --color-secondary: #2C2C2C; 
-    --color-muted-text: #ffffff; 
-
+    --color-muted-text: #ffffff;
+    --color-dark-input: #1a1a1a;
+    --color-primary-hover: #00c796; 
+    
+    /* Typographie */
     --font-heading: 'Inter', sans-serif;
     --font-body: 'Roboto', sans-serif;
+    
+    /* Espacements */
     --spacing-lg: 60px;
     --spacing-md: 25px;
     --spacing-sm: 10px;
+
+    /* Tailles de Police Spécifiques (Ajouts pour flexibilité) */
+    --font-size-button: 1.1rem;
+    --font-size-nav: 0.95rem;
+    --font-size-footer: 0.9rem;
 }
 
+/* --- Global et Reset --- */
 * {
     margin: 0;
     padding: 0;
@@ -45,9 +57,9 @@ h1, h2, h3 {
 }
 h1 { font-size: 4rem; }
 
+/* --- Typographie Spéciale --- */
 .hero h1 .highlight-text {
     color: var(--color-primary);
-    text-shadow: 0 0 8px var(--color-primary), 0 0 15px rgba(0, 255, 194, 0.4); 
     font-size: 100px;
 }
 
@@ -66,6 +78,7 @@ a:hover {
     color: var(--color-text); 
 }
 
+/* --- Header --- */
 header {
     position: fixed;
     top: 0;
@@ -126,7 +139,7 @@ nav a {
     text-decoration: none;
     color: var(--color-muted-text);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: var(--font-size-nav);
     text-transform: none;
     transition: color 0.3s ease;
 }
@@ -139,6 +152,7 @@ nav a:hover {
     flex-grow: 1;
 }
 
+/* --- Section Hero --- */
 .hero {
     min-height: 80vh;
     display: flex;
@@ -172,7 +186,7 @@ nav a:hover {
     background-color: var(--color-primary);
     color: var(--color-background);
     padding: 1rem 2.5rem;
-    font-size: 1.1rem;
+    font-size: var(--font-size-button);
     font-family: var(--font-heading);
     font-weight: 900;
     border: none;
@@ -185,11 +199,12 @@ nav a:hover {
 }
 
 .hero button:hover {
-    background-color: #00c796;
+    background-color: var(--color-primary-hover);
     color: var(--color-background);
     transform: scale(1.02);
 }
 
+/* --- Sections Générales --- */
 .section {
     padding: var(--spacing-lg) 2rem;
     max-width: 1200px;
@@ -215,7 +230,7 @@ nav a:hover {
     width: 60px;
     height: 3px;
     background: var(--color-primary);
-    margin: 10px auto 0;
+    margin: var(--spacing-sm) auto 0;
     border-radius: 0;
 }
 
@@ -232,6 +247,7 @@ nav a:hover {
     color: var(--color-muted-text);
 }
 
+/* --- Features (Souveraineté Cloud) --- */
 .features {
     display: flex;
     flex-wrap: wrap;
@@ -255,6 +271,7 @@ nav a:hover {
     box-shadow: 0 0 15px rgba(0, 255, 194, 0.2);
 }
 
+/* --- Section Contact --- */
 .contact-section {
     padding-top: var(--spacing-lg);
     padding-bottom: var(--spacing-lg);
@@ -269,8 +286,8 @@ nav a:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: var(--spacing-md);
-    margin-top: 40px;
-    margin-bottom: 60px;
+    margin-top: var(--spacing-lg); 
+    margin-bottom: var(--spacing-lg); 
 }
 
 .contact-info {
@@ -305,6 +322,7 @@ nav a:hover {
     color: var(--color-muted-text);
 }
 
+/* --- Formulaire de Contact --- */
 .contact-form-container {
     max-width: 600px;
     margin: 0 auto;
@@ -332,7 +350,7 @@ nav a:hover {
 .form-group textarea {
     width: 100%;
     padding: 15px;
-    background-color: #1a1a1a;
+    background-color: var(--color-dark-input);
     border: 1px solid var(--color-secondary);
     color: var(--color-text);
     border-radius: 4px;
@@ -352,7 +370,7 @@ nav a:hover {
     background-color: var(--color-primary);
     color: var(--color-background);
     padding: 1rem 2.5rem;
-    font-size: 1.1rem;
+    font-size: var(--font-size-button);
     font-family: var(--font-heading);
     font-weight: 900;
     border: none;
@@ -366,23 +384,24 @@ nav a:hover {
 }
 
 .submit-button:hover {
-    background-color: #00c796;
+    background-color: var(--color-primary-hover);
     transform: scale(1.01);
 }
 
 .form-note {
     text-align: center;
-    margin-top: 10px;
+    margin-top: var(--spacing-sm); 
     font-size: 0.85rem;
     color: var(--color-primary);
 }
 
+/* --- Footer --- */
 footer {
     text-align: center;
     padding: var(--spacing-md) var(--spacing-lg);
     background-color: var(--color-secondary);
     border-top: 1px solid var(--color-secondary);
-    font-size: 0.9rem;
+    font-size: var(--font-size-footer);
     color: var(--color-muted-text);
 }
 
@@ -396,6 +415,7 @@ footer a:hover {
     color: var(--color-text);
 }
 
+/* --- Responsive de Base --- */
 @media (max-width: 900px) {
     header {
         padding: 1rem 1rem;
