@@ -486,16 +486,16 @@ footer a:hover {
 @media (max-width: 480px) {
     /* Optimisations Extrêmes (Petits Mobiles) */
     
-    /* Changement Crucial : Utilisation de vw (Viewport Width) pour une adaptation parfaite */
+    /* Réduction de la Taille des Titres du Hero */
     .hero h1 {
-        font-size: 10vw; /* Rend le titre dynamique (ex: 10% de la largeur de l'écran) */
+        font-size: 8vw; /* Encore plus petit */
         line-height: 1.2;
     }
     .hero h1 .highlight-text {
-        font-size: 12vw; /* Assure que le mot clé reste proportionnel */
+        font-size: 10vw; /* Assure que le mot clé reste proportionnel */
     }
     .hero p {
-        font-size: 0.9rem; /* Texte plus petit */
+        font-size: 0.9rem; 
         margin-top: var(--spacing-md);
         margin-bottom: var(--spacing-md);
     }
@@ -503,12 +503,22 @@ footer a:hover {
         font-size: 1.8rem;
     }
     
-    /* Gestion du Menu */
+    /* Gestion du Header et Navigation (Les menus sont réintégrés) */
     header nav {
-        display: none; 
+        /* Ne pas masquer la nav, mais la forcer à prendre toute la largeur */
+        display: flex; 
+        flex-direction: column; /* Les liens s'empilent verticalement */
+        align-items: center;
+        width: 100%;
+        margin-top: 0.5rem;
     }
 
+    nav a {
+        margin: 0.3rem 0; /* Espacement vertical entre les liens */
+    }
+    
     .logo-link {
+        /* Centre le logo dans l'espace réduit du header */
         width: 100%;
         justify-content: center;
         min-width: unset;
@@ -516,7 +526,7 @@ footer a:hover {
 
     header {
         padding: 1rem 1rem;
-        flex-direction: row; 
+        flex-direction: column; /* Le logo en haut, la nav en bas */
         align-items: center;
         justify-content: center;
     }
