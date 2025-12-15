@@ -63,7 +63,6 @@ h3 { font-size: 1.6rem; }
 /* --- Typographie Spéciale --- */
 .hero h1 .highlight-text {
     color: var(--color-primary);
-    /* L'effet text-shadow a été retiré ici */
     font-size: 100px;
 }
 
@@ -427,7 +426,7 @@ footer a:hover {
     nav a {
         margin-left: 0.8rem;
     }
-    /* Diminution de la taille du titre principal sur les tablettes */
+    
     .hero h1 {
         font-size: 3rem;
     }
@@ -442,17 +441,15 @@ footer a:hover {
 @media (max-width: 768px) {
     /* Mobiles et Tablettes Portait */
     header {
-        /* On retire les padding du logo et nav sur mobile */
         padding: var(--spacing-md) 1rem;
         flex-direction: column;
         align-items: flex-start;
     }
     nav {
-        /* La navigation prend toute la largeur */
         width: 100%;
         margin-top: 1rem;
         display: flex;
-        flex-wrap: wrap; /* Permet aux liens de passer à la ligne */
+        flex-wrap: wrap;
         justify-content: center;
     }
     nav a {
@@ -461,7 +458,7 @@ footer a:hover {
     }
     
     .hero {
-        padding-top: 8rem; /* Remonte le contenu pour ne pas être caché par le header plus grand */
+        padding-top: 8rem;
         padding-bottom: 4rem;
         min-height: 50vh;
     }
@@ -472,7 +469,6 @@ footer a:hover {
     }
     
     .features, .contact-grid {
-        /* Les sections de grille passent en colonne */
         flex-direction: column;
         gap: var(--spacing-sm); 
     }
@@ -489,26 +485,30 @@ footer a:hover {
 
 @media (max-width: 480px) {
     /* Optimisations Extrêmes (Petits Mobiles) */
+    
+    /* Changement Crucial : Utilisation de vw (Viewport Width) pour une adaptation parfaite */
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 10vw; /* Rend le titre dynamique (ex: 10% de la largeur de l'écran) */
+        line-height: 1.2;
     }
     .hero h1 .highlight-text {
-        font-size: 50px;
+        font-size: 12vw; /* Assure que le mot clé reste proportionnel */
     }
     .hero p {
-        font-size: 1rem;
+        font-size: 0.9rem; /* Texte plus petit */
+        margin-top: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
     }
     .section h2 {
         font-size: 1.8rem;
     }
     
-    /* Cache la navigation pour faire place à un menu hamburger */
+    /* Gestion du Menu */
     header nav {
         display: none; 
     }
 
     .logo-link {
-        /* Centre le logo dans l'espace réduit du header */
         width: 100%;
         justify-content: center;
         min-width: unset;
@@ -516,7 +516,6 @@ footer a:hover {
 
     header {
         padding: 1rem 1rem;
-        /* Force une seule ligne pour le logo en attendant le menu hamburger */
         flex-direction: row; 
         align-items: center;
         justify-content: center;
